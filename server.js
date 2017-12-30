@@ -19,9 +19,10 @@ const forceSSL = function() {
     next();
   }
 }
+
 // Instruct the app
 // to use the forceSSL
-// middleware
+// middleware.
 app.use(forceSSL());
 
 // For all GET requests, send back index.html
