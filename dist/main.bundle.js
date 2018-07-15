@@ -1001,7 +1001,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<img [src]=\"fullImagePath\" class=\"img-fluid rounded\">\r\n<div class=\"container\">\r\n        <hr>\r\n            <post-list></post-list>\r\n</div>"
+module.exports = "<br><br>\r\n        <img [src]=\"fullImagePath\" class=\"img-fluid rounded\">\r\n\r\n<div class=\"container\">\r\n    \r\n        <hr>\r\n            <post-list></post-list>\r\n</div>"
 
 /***/ }),
 
