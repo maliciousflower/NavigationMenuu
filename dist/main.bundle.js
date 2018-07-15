@@ -988,7 +988,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "  .mobileShow {display: none;} \r\n  .notMobileShow{display: inline;}\r\n\r\n  \r\n  /* Smartphone Portrait and Landscape */ \r\n  @media only screen \r\n    and (min-width : 320px) \r\n    and (max-width : 480px){ \r\n      .mobileShow {display: inline;}\r\n      .notMobileShow{display:none;}\r\n  }", ""]);
 
 // exports
 
@@ -1001,7 +1001,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<br>\r\n<br>\r\n<img [src]=\"fullImagePath\" class=\"img-fluid rounded\">\r\n\r\n<div class=\"container\">\r\n\r\n    <hr>\r\n    <post-list></post-list>\r\n</div>"
+module.exports = "<br>\r\n<br>\r\n<img [src]=\"mobileImagePath\" class=\"img-fluid rounded headerImage mobileShow\">\r\n<img [src]=\"notMobileImagePath\" class=\"img-fluid rounded headerImage notMobileShow\">\r\n\r\n<div class=\"container\">\r\n\r\n    <hr>\r\n    <post-list></post-list>\r\n</div>"
 
 /***/ }),
 
@@ -1023,7 +1023,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var HomeComponent = (function () {
     function HomeComponent() {
-        this.fullImagePath = 'assets/images/header.jpg';
+        this.notMobileImagePath = 'assets/images/header.jpg';
+        this.mobileImagePath = 'assets/images/mob.png';
     }
     HomeComponent.prototype.ngOnInit = function () {
     };
